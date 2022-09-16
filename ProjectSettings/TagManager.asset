@@ -8,6 +8,8 @@ TagManager:
   - Coin
   - Obstacle
   - Timer
+  - RightHitBox
+  - LeftHitBox
   layers:
   - Default
   - TransparentFX

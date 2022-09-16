@@ -20,6 +20,8 @@ public class PlatformTimer : MonoBehaviour
         }
         if (isTouch) {
             StartCounting();
+            GameObject shake = (gameObject.transform.Find("platformTimer").gameObject).transform.Find("shake").gameObject;
+            shake.GetComponent<ShakeBehavior>().Begin();
         }
     }
 

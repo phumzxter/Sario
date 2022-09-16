@@ -5,6 +5,7 @@ using UnityEngine;
 public class Koopa : BaseEnermy
 {
     public float startSpeed;
+    public GameObject shell;
     protected override void Init ()
      {
          
@@ -13,6 +14,8 @@ public class Koopa : BaseEnermy
 
     public override void OnDead() {
         // state = 1;
+        // GameObject variableForPrefab = (GameObject)Resources.Load("../prefabs_L3/enemy/Shell_L3", typeof(GameObject));
+        Instantiate(shell,transform.position,transform.rotation);
         Destroy(gameObject);
     }
 

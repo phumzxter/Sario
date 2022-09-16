@@ -76,8 +76,10 @@ public class PlayerController_L3 : MonoBehaviour
     }}
 
     public void OnDieState() {
+        // mAnimator.enabled = false;
+        // mAnimator.SetTrigger("is_gameover");
+        mAnimator.Play("Die");
        Destroy(gameObject, 6f); // not work
-        mAnimator.SetTrigger("is_gameover");
         if (mAnimator.GetCurrentAnimatorStateInfo(0).length > mAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime) 
          {
             mAnimator.ResetTrigger("is_gameover");
