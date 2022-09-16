@@ -10,11 +10,12 @@ TagManager:
   - Timer
   - RightHitBox
   - LeftHitBox
+  - Ground
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - 
