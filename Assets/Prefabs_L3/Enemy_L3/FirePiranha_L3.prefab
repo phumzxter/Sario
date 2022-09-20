@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4164641148221268549}
   m_Layer: 0
-  m_Name: FirePiranha
+  m_Name: FirePiranha_L3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
