@@ -13,7 +13,9 @@ public class Goomba : BaseEnermy
 
     public override void OnDead() {
         // state = 1;
-        Destroy(gameObject, 0.5f);
+        
+        Destroy(gameObject, 0.4f);
+        gameObject.transform.Find("Explosion_Skull").gameObject.GetComponent<KillEffect>().PlayParticle();
     }
 
     public override void OnNextState() {

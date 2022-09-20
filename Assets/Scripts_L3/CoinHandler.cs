@@ -8,7 +8,7 @@ public class CoinHandler : MonoBehaviour
     public GameObject gameManager;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -32,7 +32,8 @@ public class CoinHandler : MonoBehaviour
 
         if (other.tag == "Player") {
             Debug.Log("Pick Coin");
-            Destroy(gameObject);
+            Destroy(gameObject,0.4f);
+            gameObject.transform.Find("Explosion_coin").gameObject.GetComponent<CollectionEffect>().PlayParticle();
             gameManager.GetComponent<GameManager>().addCoinScore();
         }
 

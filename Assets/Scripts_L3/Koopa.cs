@@ -6,6 +6,7 @@ public class Koopa : BaseEnermy
 {
     public float startSpeed;
     public GameObject shell;
+    public GameObject explosion;
     protected override void Init ()
      {
          
@@ -17,6 +18,10 @@ public class Koopa : BaseEnermy
         // GameObject variableForPrefab = (GameObject)Resources.Load("../prefabs_L3/enemy/Shell_L3", typeof(GameObject));
         Instantiate(shell,transform.position,transform.rotation);
         Destroy(gameObject);
+        // Instantiate(explosion,transform.position,transform.rotation).GetComponent<KillEffect>().PlayParticle();
+        // Destroy(gameObject);
+        // gameObject.transform.Find("Explosion_Skull").gameObject
+        
     }
 
     public override void OnNextState() {
