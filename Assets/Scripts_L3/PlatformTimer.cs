@@ -6,6 +6,7 @@ public class PlatformTimer : MonoBehaviour
 {
     public float timeRemaining;
     private bool isTouch;
+    public GameObject topGameObject;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +17,11 @@ public class PlatformTimer : MonoBehaviour
     void Update()
     {
         if (timeRemaining <= 0) {
+            if (topGameObject != null) {
+                topGameObject.GetComponent<Rigidbody>().isKinematic = false;
+            }
             Destroy(gameObject);
+          
         }
         if (isTouch) {
             StartCounting();

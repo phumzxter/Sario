@@ -6,13 +6,14 @@ public abstract class BaseEnermy : MonoBehaviour
 {
     protected float speed;
     protected int state;
-    protected bool facingRight;
-    protected bool facingLeft;
+    private Vector3 velocity;
+
     abstract protected void Init();
     // Start is called before the first frame update
     void Start()
     {
         state = 0;
+       
     }
 
     void Awake() {
@@ -26,13 +27,7 @@ public abstract class BaseEnermy : MonoBehaviour
               OnWalk();
         }
       
-        
-        // CheckWhereToFace();
     }
-
-    // void LateUpdate() {
-        
-    // }
 
     void OnTriggerEnter(Collider other)
     {
@@ -57,15 +52,8 @@ public abstract class BaseEnermy : MonoBehaviour
             }
         }
 
-        // if (dirX > 0) {
-          
-        // } else if (dirX < 0) {
-        //     transform.Rotate(0, 180, 0); 
-        // }
-        //move into opposite direction
     }
 
-    // public abstract void OnWalk();
     public void OnWalk() {
     
         gameObject.transform.Translate(Vector3.forward * Time.deltaTime  * speed);

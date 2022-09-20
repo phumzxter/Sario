@@ -11,6 +11,8 @@ TagManager:
   - RightHitBox
   - LeftHitBox
   - Ground
+  - Water
+  - Bullet
   layers:
   - Default
   - TransparentFX

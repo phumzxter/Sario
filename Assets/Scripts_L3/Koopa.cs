@@ -13,10 +13,8 @@ public class Koopa : BaseEnermy
      }
 
     public override void OnDead() {
-        // state = 1;
-        // GameObject variableForPrefab = (GameObject)Resources.Load("../prefabs_L3/enemy/Shell_L3", typeof(GameObject));
         Instantiate(shell,transform.position,transform.rotation);
-        Destroy(gameObject);
+        Destroy(gameObject);     
     }
 
     public override void OnNextState() {
@@ -24,25 +22,5 @@ public class Koopa : BaseEnermy
         //Play some animation
         OnDead();
     }
-
-    // public override void OnWalk() {
-        
-    //         gameObject.transform.Translate(Vector3.forward * Time.deltaTime * dirX * speed);
-    //         OnNextState();
-    //         // OnDead();
-        
-    // }
-
-    // void Update()
-    // {
-    //     OnWalk();
-    //     Debug.Log("run update");
-    // }
-
-    // void SheelState() {
-    //     if (state == 1) {
-
-    //     }
-    // }
 
 }
