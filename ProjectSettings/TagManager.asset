@@ -11,6 +11,7 @@ TagManager:
   - RightHitBox
   - LeftHitBox
   - Ground
+  - turn
   layers:
   - Default
   - TransparentFX
